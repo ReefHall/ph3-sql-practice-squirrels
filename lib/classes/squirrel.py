@@ -3,7 +3,7 @@ from lib import CONN, CURSOR
 class Squirrel:
 
     def __init__(self, name, num_acorns, rabid, id = None):
-        self._name =name
+        self.ame =name
         self.num_acorns = num_acorns
         self.rabid = rabid
         self.id =id
@@ -15,7 +15,7 @@ class Squirrel:
     def get_name(self):
         return self._name
     def set_name(self, name):
-        if(isinstance(name, str) and 1 <= name <15):
+        if(isinstance(name, str) and 1 <= len(name) < 15 ):
             self._name = name
         else:
             print("Name must be string, and greater 1 and less than 15 charcaters")
